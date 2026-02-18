@@ -6,13 +6,16 @@
 /*   By: kamys <kamys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 23:02:05 by kamys             #+#    #+#             */
-/*   Updated: 2026/02/17 11:31:46 by kamys            ###   ########.fr       */
+/*   Updated: 2026/02/18 15:43:35 by kamys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <iomanip>
-#include <string>
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
+
+# include <iostream>
+# include <iomanip>
+# include <string>
 
 class Contact
 {
@@ -32,3 +35,5 @@ class Contact
 		std::string	getLastname();
 		std::string	getNickname();
 };
+
+#endif
