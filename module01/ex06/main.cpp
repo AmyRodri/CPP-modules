@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kamys <kamys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/18 20:03:46 by kamys             #+#    #+#             */
-/*   Updated: 2026/02/18 20:48:58 by kamys            ###   ########.fr       */
+/*   Created: 2026/02/18 20:20:19 by kamys             #+#    #+#             */
+/*   Updated: 2026/02/18 20:38:11 by kamys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-# define HARL_HPP
+#include "Harl.hpp"
 
-# include <iostream>
-
-class Harl
+int	main(int ac, char **av)
 {
-	private:
-		void	debug();
-		void	info();
-		void	warning();
-		void	error();
-	public:
-		void	complain(std::string level);
-};
-
-#endif
+	if (ac != 2)
+	{
+		std::cout << "Ivalid count of argmunts" << std::endl;
+		return (1);
+	}
+	
+	Harl harl = Harl();
+	harl.complain(av[1]);
+	return (0);
+}

@@ -6,7 +6,7 @@
 /*   By: kamys <kamys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 20:07:05 by kamys             #+#    #+#             */
-/*   Updated: 2026/02/18 20:48:58 by kamys            ###   ########.fr       */
+/*   Updated: 2026/02/18 20:55:03 by kamys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,22 +34,42 @@ void	Harl::error()
 			<< " I WANT THE MANAGER, THE OWNER, AND WHOEVER IS IN CHARGE OF THIS PLACE! JESSICA, START RECORDING—THIS IS GOING ONLINE!!!" << std::endl;
 }
 
-void	Harl::complain(std::string level)
+static int	getIndex(std::string level)
 {
-	std::string levels[4] = {"DEBUG", "INFO", "WARNIG", "ERROR"};
-	void	(Harl::*functions[4]) () = {
-		&Harl::debug,
-		&Harl::info,
-		&Harl::warning,
-		&Harl::error,
-	};
-
+	std::string	levels[4] = {"DEBUG", "INFO", "WARNIG", "ERROR"};
 	for (int i = 0; i < 4; i++)
 	{
 		if (levels[i] == level)
-		{
-			(this->*functions[i])();
-			return ;
-		}	
-	}		
+			return (i);
+	}
+	return (-1);
+}
+
+void	Harl::complain(std::string level)
+{
+	switch (getIndex(level))
+	{
+	case 0:
+		std::cout << "[DEBUG]" << std::endl;
+		this->debug();
+		std::cout << std::endl;
+		/* fallthrough */
+	case 1:
+		std::cout << "[INFO]" << std::endl;
+		this->info();
+		std::cout << std::endl;
+		/* fallthrough */
+	case 2:
+		std::cout << "[WARNIG]" << std::endl;
+		this->warning();
+		std::cout << std::endl;
+		/* fallthrough */
+	case 3:
+		std::cout << "[ERROR]" << std::endl;
+		this->error();
+		std::cout << std::endl;
+		break ;
+	default:
+		std::cout << "[ Probably complaining about insignificant problems ]\n";
+	}	
 }
