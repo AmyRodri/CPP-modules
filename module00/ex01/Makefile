@@ -32,7 +32,7 @@ clean:
 	@printf "$(YELLOW)🧹 Objects cleaned$(NC)\n"
 
 fclean: clean
-	@$(RM) $(NAME)
+	@$(RM) $(BINDIR)
 	@printf "$(YELLOW)🗑️ Executable removed$(NC)\n"
 
 re: fclean all
