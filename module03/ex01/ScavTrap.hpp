@@ -6,7 +6,7 @@
 /*   By: kamys <kamys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 17:06:32 by kamys             #+#    #+#             */
-/*   Updated: 2026/02/24 22:32:04 by kamys            ###   ########.fr       */
+/*   Updated: 2026/02/24 23:18:40 by kamys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ public:
 	~ScavTrap();
 	
 	void	attack(const std::string &target);
-	void	takeDamage(unsigned int amount);
-	void	beRepaired(unsigned int amount);
 	void	guardGate();
 };
 

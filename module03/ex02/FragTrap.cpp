@@ -6,7 +6,7 @@
 /*   By: kamys <kamys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 22:06:12 by kamys             #+#    #+#             */
-/*   Updated: 2026/02/24 22:27:55 by kamys            ###   ########.fr       */
+/*   Updated: 2026/02/24 23:19:44 by kamys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	FragTrap::attack(const std::string &target)
 {
 	if (this->hitPoints <= 0 || this->energyPoints <= 0)
 	{
-		std::cout << "ClapTrap " << this->name << " cannot attack!" << std::endl;
+		std::cout << "FragTrap " << this->name << " cannot attack!" << std::endl;
 		return ;
 	}
 	this->energyPoints--;
@@ -57,28 +57,6 @@ void	FragTrap::attack(const std::string &target)
 				<< " attacks " << target
 				<< ", causing " << attackDamage
 				<< " points of damage!" << std::endl; 
-}
-
-void	FragTrap::takeDamage(unsigned int amount)
-{
-	if (this->hitPoints <= 0)
-	{
-		std::cout << "FragTrap " << this->name << " is dead!" << std::endl;
-		return ;
-	}
-	this->hitPoints -= amount;
-	std::cout << "FragTrap " << name << " takes " << amount << " points of damage!" << std::endl;
-}
-
-void	FragTrap::beRepaired(unsigned int amount)
-{
-	if (this->hitPoints <= 0 || this->energyPoints <= 0)
-	{
-		std::cout << "FragTrap " << this->name << " cannot repair!" << std::endl;
-		return ;
-	}
-	this->energyPoints--;
-	std::cout << "FragTrap " << name << " repairs itself for " << amount << " hit points!" << std::endl;
 }
 
 void	FragTrap::highFivesGuys()

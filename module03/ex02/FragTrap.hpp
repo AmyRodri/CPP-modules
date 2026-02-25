@@ -6,7 +6,7 @@
 /*   By: kamys <kamys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 22:01:49 by kamys             #+#    #+#             */
-/*   Updated: 2026/02/24 22:28:03 by kamys            ###   ########.fr       */
+/*   Updated: 2026/02/24 23:18:22 by kamys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ public:
 	~FragTrap();
 
 	void	attack(const std::string &target);
-	void	takeDamage(unsigned int amount);
-	void	beRepaired(unsigned int amount);
 	void	highFivesGuys();
 };
 

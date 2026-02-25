@@ -6,7 +6,7 @@
 /*   By: kamys <kamys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 17:17:48 by kamys             #+#    #+#             */
-/*   Updated: 2026/02/24 22:32:13 by kamys            ###   ########.fr       */
+/*   Updated: 2026/02/24 23:19:58 by kamys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	ScavTrap::attack(const std::string &target)
 {
 	if (this->hitPoints <= 0 || this->energyPoints <= 0)
 	{
-		std::cout << "ClapTrap " << this->name << " cannot attack!" << std::endl;
+		std::cout << "FragTrap " << this->name << " cannot attack!" << std::endl;
 		return ;
 	}
 	this->energyPoints--;
@@ -57,28 +57,6 @@ void	ScavTrap::attack(const std::string &target)
 				<< " attacks " << target
 				<< ", causing " << attackDamage
 				<< " points of damage!" << std::endl; 
-}
-
-void	ScavTrap::takeDamage(unsigned int amount)
-{
-	if (this->hitPoints <= 0)
-	{
-		std::cout << "ScavTrap " << this->name << " is dead!" << std::endl;
-		return ;
-	}
-	this->hitPoints -= amount;
-	std::cout << "ScavTrap " << name << " takes " << amount << " points of damage!" << std::endl;
-}
-
-void	ScavTrap::beRepaired(unsigned int amount)
-{
-	if (this->hitPoints <= 0 || this->energyPoints <= 0)
-	{
-		std::cout << "ScavTrap " << this->name << " cannot repair!" << std::endl;
-		return ;
-	}
-	this->energyPoints--;
-	std::cout << "ScavTrap " << name << " repairs itself for " << amount << " hit points!" << std::endl;
 }
 
 void	ScavTrap::guardGate()
