@@ -6,7 +6,7 @@
 /*   By: kamys <kamys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 13:57:15 by kamys             #+#    #+#             */
-/*   Updated: 2026/02/23 17:22:57 by kamys            ###   ########.fr       */
+/*   Updated: 2026/02/25 22:57:45 by kamys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,6 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		return ;
 	}
 	this->energyPoints--;
+	this->hitPoints += amount;
 	std::cout << "ClapTrap " << name << " repairs itself for " << amount << " hit points!" << std::endl;
 }
