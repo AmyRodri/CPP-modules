@@ -10,7 +10,9 @@ OBJDIR = .objs
 SRCS =	main.cpp		\
 		Animal.cpp		\
 		Dog.cpp			\
-		Cat.cpp
+		Cat.cpp			\
+		WrongCat.cpp	\
+		WrongAnimal.cpp
 OBJS = $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
 GREEN = \033[0;32m
