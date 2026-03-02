@@ -6,7 +6,7 @@
 /*   By: kamys <kamys@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 17:52:46 by kamys             #+#    #+#             */
-/*   Updated: 2026/02/28 23:10:06 by kamys            ###   ########.fr       */
+/*   Updated: 2026/03/01 23:52:08 by kamys            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Cat::Cat() : AAnimal()
 }
 
 Cat::Cat(const Cat &other) : AAnimal(other)
-{	
+{
 	this->type = other.type;
 	this->brain = new Brain(*other.brain);
 	std::cout << "Cat type: " << this->type << " constructor copy!!" << std::endl;
