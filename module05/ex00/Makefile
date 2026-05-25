@@ -8,7 +8,6 @@ BINDIR = bin
 OBJDIR = .objs
 
 SRCS =	main.cpp		\
-		Bureaucrat.hpp	\
 		Bureaucrat.cpp
 
 OBJS = $(SRCS:%.cpp=$(OBJDIR)/%.o)
