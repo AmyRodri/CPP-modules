@@ -1,4 +1,4 @@
-NAME = $(BINDIR)/Bureaucrat
+NAME = $(BINDIR)/indetify
 
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
@@ -8,7 +8,8 @@ BINDIR = bin
 OBJDIR = .objs
 
 SRCS =	main.cpp		\
-		Bureaucrat.cpp
+		Base.cpp		\
+		Functions.cpp
 
 OBJS = $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
